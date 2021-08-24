@@ -1,0 +1,12 @@
+version: '3.0'
+services:
+  postgres:
+    image: postgres
+    ports: 
+    - 5432:5432
+    environment: 
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin@123
+      POSTGRES_DB: simple-web-store
+    volumes:
+    - ./data:/var/lib/postgresql/data:rw
